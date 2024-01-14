@@ -9,6 +9,8 @@ import java.util.Set;
 public class Teacher extends Person {
     @Id
     private Long id;
+    @Column(name = "room_number")
+    private int roomNumber;
 
     @ManyToMany
     @JoinTable(
@@ -18,9 +20,6 @@ public class Teacher extends Person {
     )
     @JsonIgnoreProperties({"teachers"})
     private Set<Project> projects;
-
-    @Column(name = "room_number")
-    private int roomNumber;
 
     public int getRoomNumber() {
         return roomNumber;

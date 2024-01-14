@@ -21,13 +21,12 @@ public class Student extends Person {
     @JoinTable(
             name = "task",
             joinColumns = {
-                    @JoinColumn(name = "student_clazz", referencedColumnName = "clazz"),
-                    @JoinColumn(name = "student_catalog_number", referencedColumnName = "catalog_number")
+                    @JoinColumn(name = "student_catalog_number", referencedColumnName = "catalog_number"),
+                    @JoinColumn(name = "student_clazz", referencedColumnName = "clazz")
             },
-            inverseJoinColumns = {
-                    @JoinColumn(name = "id")
-            }
+            inverseJoinColumns = @JoinColumn(name = "project_id", referencedColumnName = "id")
     )
+    @JsonIgnoreProperties({"students"})
     private Set<Project> projects;
 
     public StudentId getStudentId() {

@@ -12,6 +12,8 @@ public class Project {
 
     @Id
     private Long id;
+    private String name;
+    private String description;
 
     @ManyToMany
     @JoinTable(
@@ -21,9 +23,6 @@ public class Project {
     )
     @JsonIgnoreProperties({"projects"})
     private Set<Teacher> teachers;
-
-    private String name;
-    private String description;
 
     public Long getId() {
         return id;

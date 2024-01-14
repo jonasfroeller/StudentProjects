@@ -1,5 +1,6 @@
 package at.htlleonding.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 
 @Entity
@@ -9,16 +10,21 @@ public class Task {
 
     @Id
     private Long id;
-
-    @ManyToOne
-    @JoinColumn(name = "project_id")
-    private Project project;
-    @ManyToOne
-    private Student student;
-
     private String title;
     @Column(name = "hours_worked")
     private int hoursWorked;
+
+    @ManyToOne
+    @JoinColumn(name = "project_id", referencedColumnName = "id")
+    @JsonIgnoreProperties({"tasks"})
+    private Project project;
+    @ManyToOne
+    @JoinColumns({
+            @JoinColumn(name = "student_catalog_number", referencedColumnName = "catalog_number"),
+            @JoinColumn(name = "student_clazz", referencedColumnName = "clazz")
+    })
+    @JsonIgnoreProperties({"tasks"})
+    private Student student;
 
     public Long getId() {
         return id;
