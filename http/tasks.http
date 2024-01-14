@@ -1,0 +1,7 @@
+### list tasks
+
+GET localhost:8080/api/tasks/list/1
+
+### get task by id
+
+GET localhost:8080/api/tasks/3

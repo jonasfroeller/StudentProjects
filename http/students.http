@@ -1,0 +1,7 @@
+### list students
+
+GET localhost:8080/api/students/list/4XHITM
+
+### get student by id
+
+GET localhost:8080/api/students/4XHIF/1

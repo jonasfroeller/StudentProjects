@@ -1,0 +1,7 @@
+### list project
+
+GET localhost:8080/api/projects/list
+
+### get project by id
+
+GET localhost:8080/api/projects/1
