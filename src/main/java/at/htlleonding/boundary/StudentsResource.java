@@ -1,8 +1,8 @@
 package at.htlleonding.boundary;
 
-import at.htlleonding.repository.StudentRepository;
 import at.htlleonding.model.Student;
 import at.htlleonding.model.StudentId;
+import at.htlleonding.repository.StudentRepository;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;

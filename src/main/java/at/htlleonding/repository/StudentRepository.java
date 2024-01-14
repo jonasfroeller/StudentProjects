@@ -1,10 +1,10 @@
 package at.htlleonding.repository;
 
+import at.htlleonding.model.Student;
 import at.htlleonding.model.StudentId;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import jakarta.persistence.EntityManager;
-import at.htlleonding.model.Student;
 
 import java.util.List;
 
