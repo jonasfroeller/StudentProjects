@@ -9,15 +9,15 @@ import java.util.List;
 
 @ApplicationScoped
 public class ProjectRepository {
-	@Inject
-	EntityManager entityManager;
+    @Inject
+    EntityManager entityManager;
 
-	public List<Project> projectList() {
-		return entityManager.createNamedQuery(Project.QUERY_SELECT_ALL, Project.class)
-			.getResultList();
-	}
+    public List<Project> projectList() {
+        return entityManager.createNamedQuery(Project.QUERY_SELECT_ALL, Project.class)
+                .getResultList();
+    }
 
-	public Project projectById(Long id) {
-		return entityManager.find(Project.class, id);
-	}
+    public Project projectById(Long id) {
+        return entityManager.find(Project.class, id);
+    }
 }

@@ -1,0 +1,15 @@
+### average-hours-per-task
+
+GET localhost:8080/api/reports/average-hours-per-task
+
+### list/teacher-reports
+
+GET localhost:8080/api/reports/list/teacher-reports
+
+### list/hardest-working-students/{amount}
+
+GET localhost:8080/api/reports/list/hardest-working-students/5
+
+### list/project-reports
+
+GET localhost:8080/api/reports/list/project-reports

@@ -9,16 +9,16 @@ import java.util.List;
 
 @ApplicationScoped
 public class TaskRepository {
-	@Inject
-	EntityManager entityManager;
+    @Inject
+    EntityManager entityManager;
 
-	public List<Task> taskListByProjectId(Long projectId) {
-		return entityManager.createNamedQuery(Task.QUERY_SELECT_BY_PROJECT, Task.class)
-				.setParameter("projectId", projectId)
-				.getResultList();
-	}
+    public List<Task> taskListByProjectId(Long projectId) {
+        return entityManager.createNamedQuery(Task.QUERY_SELECT_BY_PROJECT, Task.class)
+                .setParameter("projectId", projectId)
+                .getResultList();
+    }
 
-	public Task taskById(Long id) {
-		return entityManager.find(Task.class, id);
-	}
+    public Task taskById(Long id) {
+        return entityManager.find(Task.class, id);
+    }
 }
